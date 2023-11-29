@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting App</title>
+</head>
+<body>
+    <h1>Sort it!</h1>
+        <h2>Enter random numbers, get given ascending ordered list</h2>
+        <p>Enter Values: </p>
+        {%for i in range(0, len)%}
+            <form method="post" action='{{url_for("sorte")}}'>
+                 <p><input type="text" name="values" /></p>
+                 {%endfor%}
+                 <p><input type="submit" value="submit" /></p>
+            </form>
+            <form method="post" mimetype='application/json' action='{{url_for("index")}}'>
+                <p><input type="submit" value="Start Again" /></p>
+        
+</body>
+</html>
